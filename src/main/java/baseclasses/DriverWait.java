@@ -1,4 +1,4 @@
-package BASE_CLASSES;
+package baseclasses;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,42 +7,40 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class DRIVERWAIT {
-	WebDriver dr;
-	WebElement we;
+public class DriverWait {
+	WebDriver driver;
+	WebElement web_Element;
 //constructor for driver
-public DRIVERWAIT(WebDriver dr)
+public DriverWait(WebDriver driver)
 	{
-		this.dr=dr;
+		this.driver=driver;
 	}
 //webdriverwait for element to be clickable
 public WebElement clickable(By locator,int timeout)
 	{
 	try 
 	{
-		WebDriverWait wt=new WebDriverWait(dr,timeout);
-		we=wt.until(ExpectedConditions.elementToBeClickable(locator));
-		
+		WebDriverWait wt=new WebDriverWait(driver,timeout);
+		web_Element=wt.until(ExpectedConditions.elementToBeClickable(locator));
 	}
 	catch(WebDriverException e)
 	{
-		
+		e.printStackTrace();
 	}
-	return we;
+		return web_Element;
 	}
 //webdriverwait for text to be visible 
 public WebElement visibility(By locator,int timeout)
 	{
 	try 
 	{
-		WebDriverWait wt=new WebDriverWait(dr,timeout);
-		we=wt.until(ExpectedConditions.visibilityOfElementLocated(locator));
-		
+		WebDriverWait wt=new WebDriverWait(driver,timeout);
+		web_Element=wt.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
 	catch(WebDriverException e)
 	{
-		
+		e.printStackTrace();
 	}
-	return we;
+		return web_Element;
 	}
 }
