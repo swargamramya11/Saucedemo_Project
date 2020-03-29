@@ -20,7 +20,7 @@ public ClickedAboutLinkPage(WebDriver driver)
 //To verify whether the page is navigated to About correctly
 public String verify_AboutLinkPage()        
 		{
-			WebElement w1=driverWait.visibility(verify_Text,20);  
+			WebElement w1=driverWait.visibility(verify_Text,50);  
 			String actual_Text=w1.getText();
 			System.out.println(actual_Text);
 			System.out.println("Navigated to clicked page");

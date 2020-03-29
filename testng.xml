@@ -3,8 +3,8 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="tests.TestFirefox"/>
-      <class name="tests.TestChrome"/>
-    </classes>
+    	<class name="tests.TestChrome"/>
+      	<class name="tests.TestFirefox"/>
+     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

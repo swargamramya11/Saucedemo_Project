@@ -22,6 +22,7 @@ public static WebDriver Launch_Browser(String browser,String url)
 			driver=new FirefoxDriver();
 	}
 			driver.get(url);
+			driver.manage().window().maximize();
 			return driver;
 	}
 }

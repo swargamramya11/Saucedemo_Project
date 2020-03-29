@@ -3,20 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="TEST.Test_firefox">
+      <class name="tests.TestFirefox">
         <methods>
-          <include name="swaglabs3" invocation-numbers="0"/>
+          <include name="testCase3" invocation-numbers="0"/>
           <include name="close"/>
           <include name="launchBrowser"/>
         </methods>
-      </class> <!-- TEST.Test_firefox -->
-      <class name="TEST.Test_chrome">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="swaglabs3" invocation-numbers="0"/>
-          <include name="close"/>
-        </methods>
-      </class> <!-- TEST.Test_chrome -->
+      </class> <!-- tests.TestFirefox -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
